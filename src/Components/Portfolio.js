@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Carousel from "react-multi-carousel";
-import { Card, CardActionArea, CardMedia, CardContent, Typography, CardActions, Button, CardHeader } from '@material-ui/core'
+import { Card, CardActionArea, CardMedia, CardContent } from '@material-ui/core'
 import "react-multi-carousel/lib/styles.css";
 import '../Styles/portfolio.scss';
 
 
 class Portfolio extends Component {
-  styles = 
+  styles =
     {
       card: {
         maxWidth: 280,
@@ -14,10 +14,6 @@ class Portfolio extends Component {
         margin: 10,
         border: 'solid grey 1px',
         backgroundColor: ''
-      },
-      media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
       }
     };
   responsive = {
@@ -45,40 +41,22 @@ class Portfolio extends Component {
         responsive={this.responsive}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={50000}
-        renderDotsOutside={true}
-        swipeable={true}
-        showDots={true}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        deviceType={this.props.deviceType}
-        itemClass="carousel-item-padding-40-px"
-        containerClass="carousel-container" >
+        autoPlaySpeed={5000} >
         {
-            this.props.data.projects.map( (project, index) => 
+            this.props.data.projects.map( (project, index) =>
             <div key={index}>
                   <Card style={this.styles.card}>
-                      <CardActionArea color="primary" variant="contained">
-                            <CardHeader title={project.title}>
-                            </CardHeader>
+                      <CardActionArea color="primary" variant="contained" href={project.url} target="_blank">
                             <CardMedia
-                              style={this.styles.media}
+                              style={{height: 0, paddingTop: '56.25%'}}
                               image={"images/portfolio/"+ project.image}
                               title="Projects"
                             />
                             <CardContent>
-                                  <Typography variant="h6" color="textSecondary" component="p">
-                                    {project.category}
-                                  </Typography>
+                                  <h5>{project.title}</h5>
+                                    <p>{project.category}</p>
                             </CardContent>
                       </CardActionArea>
-                      <CardActions>
-                            <Button size="medium" color="primary" variant="contained">
-                              Share
-                            </Button>
-                            <Button size="medium" color="primary" variant="contained" href={project.url} target="_blank">
-                              Learn More
-                            </Button>
-                      </CardActions>
                 </Card>
             </div>
         )
