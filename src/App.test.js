@@ -1,8 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from '@testing-library/react';
 import App from './App';
 
+jest.mock('react-ga', () => ({
+  initialize: jest.fn(),
+  pageview: jest.fn(),
+}));
+
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  render(<App />);
 });
