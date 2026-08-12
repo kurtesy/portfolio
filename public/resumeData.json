@@ -1,10 +1,10 @@
 {
   "main": {
     "name": "Nishant Patel",
-    "occupation": "Senior Full Stack Engineer | AI & Cloud Specialist",
-    "description": "Innovative Senior Full Stack Developer with 10+ years of expertise in architecting high-scalability software solutions across Fintech, Foodtech, and AI domains.",
+    "occupation": "Senior Full Stack Engineer | AI & Cloud Architecture",
+    "description": "10+ years building high-scale distributed systems and applied-AI platforms across Fintech and Foodtech",
     "image": "profile_pic.jpg",
-    "bio": "Expert in Python, Golang, and Cloud-native architectures. Specialized in Digital Document Processing (DDP) and Computer Vision, consistently delivering 95%+ accuracy in automated data extraction. Experienced in engineered RAG-based AI models and Gemini Pro integrations.",
+    "bio": "10+ years building high-scale distributed systems and applied-AI platforms across Fintech and Foodtech. Led a Gemini 3 migration cutting AI inference costs 90% and latency 36% while holding accuracy at 95%+. Specializes in Golang, cloud-native architecture (AWS/GCP), and production RAG/LLM engineering.",
     "contactmessage": "If you wanna talk to me, feel free to drop me a email or reach out to me on linkedin",
     "email": "np210291@gmail.com",
     "phone": "+49 157 5355 4462",
@@ -15,7 +15,7 @@
       "zip": ""
     },
     "website": "http://www.kurtesy.tech",
-    "resumedownload": "https://github.com/kurtesy/Resume/blob/main/Nishant_Patel_Full_Stack_Engineer.pdf",
+    "resumedownload": "/resume.html",
     "social": [
       {
         "name": "linkedin",
@@ -30,18 +30,18 @@
     ]
   },
   "resume": {
-    "skillmessage": "Technical mastery in Python (Expert), Golang, and TypeScript, with specialized experience in Vertex AI, Gemini Pro, and high-concurrency Microservices.",
+    "skillmessage": "Technical mastery in Golang and Python, with specialized experience in Vertex AI, Gemini Pro/3, RAG/LLM engineering, and cloud-native architecture on AWS and GCP.",
     "education": [
       {
         "school": "IIIT Bangalore",
-        "degree": "PG Certification NLP & Artificial Intelligence",
-        "graduated": "March 2019",
+        "degree": "PG Certification, NLP & Artificial Intelligence",
+        "graduated": "2018 - 2019",
         "description": "Specialization in NLP and Artificial Intelligence."
       },
       {
         "school": "MANIT Bhopal",
-        "degree": "Bachelor of Technology Electronics & Communications",
-        "graduated": "April 2014",
+        "degree": "B.Tech, Electronics & Communications",
+        "graduated": "2010 - 2014",
         "description": "Electronics and Communications Engineering."
       }
     ],
@@ -49,51 +49,51 @@
       {
         "company": "Delivery Hero | Berlin",
         "title": "Senior Software Developer",
-        "years": "April 2025 - Present",
-        "description": "Spearheading Digital Document Processing (DDP) solutions; architecting multi-strategy OCR pipelines using Rapid OCR and OpenCV; engineering RAG-based AI models on GCP Vertex AI."
+        "years": "2025 - Present",
+        "description": "Led Gemini 3 migration across the VDDP pipeline, cutting inference costs 90% and latency 36% while holding accuracy at 95%+; architected an OpenSearch deduplication engine with custom IBAN/Tax ID normalization for global vendor data quality; owned \"OCR Studio\" backend end-to-end (API contracts, config management), accelerating OCR testing cycles for the wider team; led cross-functional delivery of Menu Enrichment (AI descriptions, translation, menu sync) across 5 teams."
       },
       {
-        "company": "Delivery Hero | Berlin, Germany",
-        "title": "Software Developer II",
-        "years": "January 2023 - April 2025",
-        "description": "Engineered event-driven microservices using FastAPI and DynamoDB; optimized API performance with 15% latency reduction; automated CI/CD via GitHub Actions and DroneCI."
+        "company": "Delivery Hero | Berlin",
+        "title": "Back End Developer",
+        "years": "2023 - 2025",
+        "description": "Engineered event-driven microservices for Vendor User management (Golang, FastAPI, DynamoDB); onboarded Talabat (7 countries) and Pedidosya (15 countries) onto the Vendor Interface platform; built an agentic MCP + Python pipeline automating vendor config testing, published internally as open source; cut authorization-module latency 15% via load testing and lifted deployment frequency 30% via CI/CD automation."
       },
       {
         "company": "HSBC | Hyderabad, India",
         "title": "Senior Consultant Specialist",
-        "years": "August 2022 - December 2022",
-        "description": "Orchestrated Corporate Portfolio Management tools using Python/Flask/Vue.js architecture and optimized PostgreSQL database performance."
+        "years": "2022",
+        "description": "Built Corporate Portfolio Management tools using Python/Flask/Vue.js; optimized PostgreSQL and Redis for high-volume financial data."
       },
       {
         "company": "Aviso AI | Hyderabad, India",
         "title": "Senior Full Stack Engineer / Lead",
-        "years": "April 2020 - August 2022",
-        "description": "Led the migration of legacy systems to Microservices, improving reliability by 25%; delivered AI-driven sales forecasting features."
+        "years": "2020 - 2022",
+        "description": "Led the migration of legacy systems to microservices, improving reliability by 25%; led a pod delivering AI-driven sales forecasting features."
       },
       {
         "company": "Bank of America | Hyderabad, India",
         "title": "Senior Software Engineer",
-        "years": "November 2016 - July 2018",
-        "description": "Architected data science algorithms for market data reconciliation using NumPy and Pandas; streamlined financial reporting workflows."
+        "years": "2016 - 2018",
+        "description": "Built market-data reconciliation algorithms (NumPy/Pandas), cutting turnaround from 24 hours to a few hours; managed a 4-engineer pod."
       },
       {
         "company": "TEKsystems | Hyderabad, India",
         "title": "Software Engineer",
-        "years": "June 2014 - October 2016",
-        "description": "Developed scalable applications in Java, Python, and C++; optimized PL/SQL queries and Oracle BI dashboards."
+        "years": "2014 - 2016",
+        "description": "Built enterprise applications in Java, Python, and C++; scaled the \"Recon Pro\" application to 1M+ daily transactions."
       }
     ],
     "skills": [
       {
-        "name": "Python (Expert)",
+        "name": "Golang",
+        "level": "90%"
+      },
+      {
+        "name": "Python",
         "level": "95%"
       },
       {
-        "name": "Golang",
-        "level": "85%"
-      },
-      {
-        "name": "AI (Vertex AI/Gemini Pro)",
+        "name": "AI (Vertex AI/Gemini Pro/3, RAG)",
         "level": "90%"
       },
       {
@@ -101,12 +101,38 @@
         "level": "90%"
       },
       {
-        "name": "Kubernetes / Docker",
+        "name": "AWS / GCP",
+        "level": "85%"
+      },
+      {
+        "name": "Kubernetes / Docker / Terraform",
         "level": "85%"
       },
       {
         "name": "OpenCV / OCR",
         "level": "80%"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Oracle CRM Fusion Certified"
+      },
+      {
+        "name": "Microsoft Azure Cloud Computing Certified"
+      }
+    ],
+    "languages": [
+      {
+        "name": "English",
+        "level": "Full Professional"
+      },
+      {
+        "name": "German",
+        "level": "Elementary (A2)"
+      },
+      {
+        "name": "Hindi",
+        "level": "Native"
       }
     ]
   }

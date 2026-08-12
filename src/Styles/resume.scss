@@ -1,0 +1,37 @@
+.row.certifications-languages,
+.row.languages {
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.row.languages {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.certifications-list,
+.languages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.certifications-list li {
+    font: 16px/24px 'librebaskerville-italic', serif;
+    color: #6E7881;
+    margin-bottom: 9px;
+}
+
+.languages-list li {
+    display: flex;
+    justify-content: space-between;
+    max-width: 320px;
+    font: 16px/24px 'librebaskerville-italic', serif;
+    color: #6E7881;
+    margin-bottom: 9px;
+}
+
+.languages-list li em.date {
+    font-style: normal;
+}

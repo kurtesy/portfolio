@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../Styles/resume.scss';
 
 class Resume extends Component {
   render() {
@@ -19,6 +20,12 @@ class Resume extends Component {
       var skills = this.props.data.skills.map(function(skills){
         var className = 'bar-expand '+skills.name.toLowerCase();
         return <li key={skills.name}><span style={{width: skills.level}} className={className}></span><em>{skills.name}</em></li>
+      })
+      var certifications = this.props.data.certifications && this.props.data.certifications.map(function(certification){
+        return <li key={certification.name}>{certification.name}</li>
+      })
+      var languages = this.props.data.languages && this.props.data.languages.map(function(language){
+        return <li key={language.name}><span>{language.name}</span><em className="date">{language.level}</em></li>
       })
     }
 
@@ -70,6 +77,32 @@ class Resume extends Component {
 					</ul>
 				</div>
 			</div>
+      </div>
+
+      <div className="row certifications-languages">
+
+         <div className="three columns header-col">
+            <h1><span>Certifications</span></h1>
+         </div>
+
+         <div className="nine columns main-col">
+            <ul className="certifications-list">
+              {certifications}
+            </ul>
+         </div>
+      </div>
+
+      <div className="row languages">
+
+         <div className="three columns header-col">
+            <h1><span>Languages</span></h1>
+         </div>
+
+         <div className="nine columns main-col">
+            <ul className="languages-list">
+              {languages}
+            </ul>
+         </div>
       </div>
    </section>
     );
