@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Nishant Patel · Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --accent: #1f4d8f;
+    --ink: #1a1a1a;
+    --body: #262421;
+    --muted: #5a564e;
+    --meta: #6b6760;
+    --line: #e7e5e0;
+    --tag-bg: #eef2f8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: #e9e6df;
+    font-family: 'Inter', -apple-system, "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    margin: 0;
+    padding: 28px 0;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: #fff;
+    padding: 16mm 15mm;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.18);
+  }
+  header.top {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  header.top h1 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin: 0 0 8px;
+  }
+  .role-line {
+    font-size: 12.5px;
+    color: var(--accent);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    margin-bottom: 9px;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+    font-size: 11.3px;
+    color: var(--muted);
+  }
+  .contact span.sep { opacity: 0.3; }
+  .section h2 {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+  }
+  .accent-bar {
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background: var(--accent);
+    margin-right: 9px;
+  }
+  .section { margin-bottom: 18px; }
+  .summary p {
+    font-size: 12.8px;
+    line-height: 1.65;
+    color: var(--body);
+    margin: 0;
+  }
+  .grid {
+    display: flex;
+    align-items: flex-start;
+  }
+  .grid > .col-left {
+    width: 62%;
+    padding-right: 14px;
+  }
+  .grid > .col-right {
+    width: 38%;
+  }
+  .role { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .role .company { font-weight: 600; font-size: 13.5px; }
+  .role .title { color: var(--muted); font-size: 12px; }
+  .role .meta { font-size: 10.5px; color: var(--meta); white-space: nowrap; }
+  ul.bullets { list-style: none; padding: 0; margin: 6px 0 0; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 13px;
+    font-size: 11.8px;
+    line-height: 1.55;
+    color: var(--body);
+    margin-bottom: 3px;
+  }
+  ul.bullets li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 7px;
+    width: 4.5px; height: 4.5px;
+    background: var(--accent);
+    border-radius: 1px;
+  }
+  .accent-num { font-weight: 600; color: var(--accent); }
+  .job-block { margin-bottom: 13px; }
+  .job-block:last-child { margin-bottom: 0; }
+
+  .earlier-item { margin-bottom: 8px; }
+  .earlier-item:last-child { margin-bottom: 0; }
+  .earlier-item .role .company { font-size: 12.5px; }
+  .earlier-item p.desc {
+    font-size: 11.3px;
+    line-height: 1.5;
+    color: var(--body);
+    margin: 2px 0 0;
+  }
+
+  .edu-item { margin-bottom: 10px; }
+  .edu-item:last-child { margin-bottom: 0; }
+  .edu-item .school { font-size: 12.8px; font-weight: 600; margin-bottom: 1px; }
+  .edu-item .degree { font-size: 11px; color: var(--muted); }
+  .edu-item .years { font-size: 10.7px; color: var(--meta); margin-top: 1px; }
+
+  .tag-wrap { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    background: var(--tag-bg);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .skill-group { margin-bottom: 8px; }
+  .skill-group:last-child { margin-bottom: 0; }
+  .skill-group .label { font-size: 10px; color: var(--meta); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  ul.plain { list-style: none; margin: 0; padding: 0; font-size: 11.3px; color: var(--body); }
+  ul.plain li { display: flex; justify-content: space-between; margin-bottom: 5px; }
+  ul.plain li:last-child { margin-bottom: 0; }
+  ul.plain li span.v { color: var(--muted); }
+
+  .oss p { font-size: 11.3px; line-height: 1.55; color: var(--body); margin: 0 0 6px; }
+  .oss p:last-child { margin-bottom: 0; }
+  .oss .repo { font-weight: 600; color: var(--ink); }
+  .oss .stat { color: var(--muted); }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; margin: 0; }
+    .print-bar { display: none; }
+  }
+  .print-bar {
+    width: 210mm;
+    margin: 0 auto 12px;
+    text-align: right;
+  }
+  .print-bar button {
+    font-family: 'Inter', -apple-system, "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  .print-bar button:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+<div class="print-bar"><button onclick="window.print()">Download as PDF</button></div>
+<div class="page">
+
+  <header class="top">
+    <h1>Nishant Patel</h1>
+    <div class="role-line">Senior Full Stack Engineer &nbsp;·&nbsp; AI &amp; Cloud Architecture</div>
+    <div class="contact">
+      <span>Berlin, Germany</span><span class="sep">|</span>
+      <span>np210291@gmail.com</span><span class="sep">|</span>
+      <span>+49 157 5355 4462</span><span class="sep">|</span>
+      <span>github.com/kurtesy</span><span class="sep">|</span>
+      <span>linkedin.com/in/nishant-patel-in</span>
+    </div>
+  </header>
+
+  <section class="section summary">
+    <h2><span class="accent-bar"></span>Summary</h2>
+    <p>10+ years building high-scale distributed systems and applied-AI platforms across Fintech and Foodtech. Led a Gemini&nbsp;3 migration cutting AI inference costs <span class="accent-num">90%</span> and latency <span class="accent-num">36%</span> while holding accuracy at <span class="accent-num">95%+</span>. Specializes in Golang, cloud-native architecture (AWS/GCP), and production RAG/LLM engineering.</p>
+  </section>
+
+  <div class="grid">
+    <!-- LEFT COLUMN -->
+    <div class="col-left">
+      <section class="section">
+        <h2><span class="accent-bar"></span>Experience</h2>
+
+        <div class="job-block">
+          <div class="role">
+            <div><span class="company">Delivery Hero</span> <span class="title">— Senior Software Developer</span></div>
+            <div class="meta">2025 – Present</div>
+          </div>
+          <ul class="bullets">
+            <li>Led Gemini&nbsp;3 migration across the VDDP pipeline, cutting inference costs <span class="accent-num">90%</span> and latency <span class="accent-num">36%</span> while holding accuracy at <span class="accent-num">95%+</span></li>
+            <li>Architected an OpenSearch deduplication engine with custom IBAN/Tax ID normalization — the foundation for global vendor data quality</li>
+            <li>Owned "OCR Studio" backend end-to-end (API contracts, config management), accelerating OCR testing cycles for the wider team</li>
+            <li>Led cross-functional delivery of Menu Enrichment (AI descriptions, translation, menu sync) across <span class="accent-num">5 teams</span></li>
+          </ul>
+        </div>
+
+        <div class="job-block">
+          <div class="role">
+            <div><span class="company">Delivery Hero</span> <span class="title">— Back End Developer</span></div>
+            <div class="meta">2023 – 2025</div>
+          </div>
+          <ul class="bullets">
+            <li>Engineered event-driven microservices for Vendor User management (Golang, FastAPI, DynamoDB)</li>
+            <li>Onboarded Talabat (<span class="accent-num">7</span> countries) and Pedidosya (<span class="accent-num">15</span> countries) onto the Vendor Interface platform</li>
+            <li>Built an agentic MCP + Python pipeline automating vendor config testing, published internally as open source</li>
+            <li>Cut authorization-module latency <span class="accent-num">15%</span> via load testing; lifted deployment frequency <span class="accent-num">30%</span> via CI/CD automation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent-bar"></span>Earlier Experience</h2>
+
+        <div class="earlier-item">
+          <div class="role">
+            <div><span class="company">HSBC</span> <span class="title">— Senior Consultant Specialist, Hyderabad</span></div>
+            <div class="meta">2022</div>
+          </div>
+          <p class="desc">Corporate Portfolio Management tools (Python/Flask/Vue.js); optimized PostgreSQL + Redis for high-volume financial data.</p>
+        </div>
+
+        <div class="earlier-item">
+          <div class="role">
+            <div><span class="company">Aviso AI</span> <span class="title">— Senior Full Stack Engineer / Lead, Hyderabad</span></div>
+            <div class="meta">2020 – 2022</div>
+          </div>
+          <p class="desc">Led legacy-to-microservices migration (+25% reliability); led a pod delivering AI-driven sales forecasting.</p>
+        </div>
+
+        <div class="earlier-item">
+          <div class="role">
+            <div><span class="company">Bank of America</span> <span class="title">— Senior Software Engineer, Hyderabad</span></div>
+            <div class="meta">2016 – 2018</div>
+          </div>
+          <p class="desc">Market-data reconciliation algorithms (NumPy/Pandas), cutting turnaround from 24h to a few hours; managed a 4-engineer pod.</p>
+        </div>
+
+        <div class="earlier-item">
+          <div class="role">
+            <div><span class="company">TEKsystems</span> <span class="title">— Software Engineer, Hyderabad</span></div>
+            <div class="meta">2014 – 2016</div>
+          </div>
+          <p class="desc">Enterprise apps in Java/Python/C++; scaled the "Recon Pro" application to 1M+ daily transactions.</p>
+        </div>
+      </section>
+
+      <section class="section" style="margin-bottom:0;">
+        <h2><span class="accent-bar"></span>Open Source</h2>
+        <div class="oss">
+          <p><span class="repo">dh-vrm-qca-scripts</span> — <span class="stat">agentic MCP + Python tooling</span> for automated vendor-config testing (Delivery Hero, internal)</p>
+          <p><span class="repo">github.com/kurtesy</span> — <span class="stat">39 repositories · Pull Shark x3 · Arctic Code Vault Contributor</span></p>
+        </div>
+      </section>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col-right">
+      <section class="section">
+        <h2><span class="accent-bar"></span>Education</h2>
+        <div class="edu-item">
+          <div class="school">IIIT Bangalore</div>
+          <div class="degree">PG Certification, NLP &amp; Artificial Intelligence</div>
+          <div class="years">2018 – 2019</div>
+        </div>
+        <div class="edu-item">
+          <div class="school">MANIT Bhopal</div>
+          <div class="degree">B.Tech, Electronics &amp; Communications</div>
+          <div class="years">2010 – 2014</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent-bar"></span>Core Skills</h2>
+        <div class="skill-group">
+          <div class="label">AI / ML</div>
+          <div class="tag-wrap">
+            <span class="tag">Vertex AI</span><span class="tag">Gemini Pro/3</span><span class="tag">RAG</span><span class="tag">OCR</span><span class="tag">VLMs</span><span class="tag">Agentic MCP</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="label">Languages &amp; Frameworks</div>
+          <div class="tag-wrap">
+            <span class="tag">Golang</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">React JS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="label">Cloud &amp; Infra</div>
+          <div class="tag-wrap">
+            <span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Terraform</span><span class="tag">Cloudflare</span><span class="tag">OpenSearch</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <div class="label">DevOps</div>
+          <div class="tag-wrap">
+            <span class="tag">GitHub Actions</span><span class="tag">DroneCI</span><span class="tag">CI/CD</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2><span class="accent-bar"></span>Languages</h2>
+        <ul class="plain">
+          <li><span>English</span><span class="v">Full Professional</span></li>
+          <li><span>German</span><span class="v">Elementary (A2)</span></li>
+          <li><span>Hindi</span><span class="v">Native</span></li>
+        </ul>
+      </section>
+
+      <section class="section" style="margin-bottom:0;">
+        <h2><span class="accent-bar"></span>Certifications</h2>
+        <ul class="plain" style="display:block;">
+          <li style="display:block; margin-bottom:6px;">Oracle CRM Fusion Certified</li>
+          <li style="display:block;">Microsoft Azure Cloud Computing Certified</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
