@@ -47,14 +47,14 @@
     ],
     "work": [
       {
-        "company": "Delivery Hero | Berlin, Germany",
+        "company": "Delivery Hero | Berlin",
         "title": "Senior Software Developer",
         "years": "April 2025 - Present",
         "description": "Spearheading Digital Document Processing (DDP) solutions; architecting multi-strategy OCR pipelines using Rapid OCR and OpenCV; engineering RAG-based AI models on GCP Vertex AI."
       },
       {
         "company": "Delivery Hero | Berlin, Germany",
-        "title": "Back End Developer",
+        "title": "Software Developer II",
         "years": "January 2023 - April 2025",
         "description": "Engineered event-driven microservices using FastAPI and DynamoDB; optimized API performance with 15% latency reduction; automated CI/CD via GitHub Actions and DroneCI."
       },

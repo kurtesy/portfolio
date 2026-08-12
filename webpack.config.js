@@ -1,8 +1,49 @@
+const fs = require('fs');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
+
+// Minimal, dependency-free replacement for copy-webpack-plugin.
+// Recursively copies everything from `public/` (except index.html and
+// favicon.ico, which HtmlWebpackPlugin already handles) into the output
+// directory so that static assets referenced by absolute paths
+// (css/js/images/fonts, resumeData.json, manifest.json, CNAME, etc.)
+// actually exist in the production build.
+class CopyPublicAssetsPlugin {
+    constructor({ from, to, ignore = [] }) {
+        this.from = from;
+        this.to = to;
+        this.ignore = ignore;
+    }
+
+    apply(compiler) {
+        compiler.hooks.afterEmit.tap('CopyPublicAssetsPlugin', () => {
+            this.copyRecursive(this.from, this.to);
+        });
+    }
+
+    copyRecursive(src, dest) {
+        const entries = fs.readdirSync(src, { withFileTypes: true });
+        fs.mkdirSync(dest, { recursive: true });
+
+        for (const entry of entries) {
+            const srcPath = path.join(src, entry.name);
+            const destPath = path.join(dest, entry.name);
+
+            if (this.ignore.includes(entry.name)) {
+                continue;
+            }
+
+            if (entry.isDirectory()) {
+                this.copyRecursive(srcPath, destPath);
+            } else {
+                fs.copyFileSync(srcPath, destPath);
+            }
+        }
+    }
+}
 
 module.exports = (env, argv) => {
     const isProduction = argv.mode === 'production';
@@ -23,7 +64,7 @@ module.exports = (env, argv) => {
                 directory: path.join(__dirname, 'public'),
             },
             compress: true,
-            port: 3000,
+            port: 3049,
             hot: true,
             historyApiFallback: true, // Important for single-page apps
             // proxy: [
@@ -91,6 +132,11 @@ module.exports = (env, argv) => {
                 chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
             }),
             new NodePolyfillPlugin(),
+            new CopyPublicAssetsPlugin({
+                from: path.resolve(__dirname, 'public'),
+                to: path.resolve(__dirname, 'build'),
+                ignore: ['index.html', 'favicon.ico'],
+            }),
         ].filter(Boolean),
         optimization: {
             minimize: isProduction,

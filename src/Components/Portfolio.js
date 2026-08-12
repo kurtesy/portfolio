@@ -49,7 +49,7 @@ class Portfolio extends Component {
                       <CardActionArea color="primary" variant="contained" href={project.url} target="_blank">
                             <CardMedia
                               style={{height: 0, paddingTop: '56.25%'}}
-                              image={"images/portfolio/"+ project.image}
+                              image={"/images/portfolio/"+ project.image}
                               title="Projects"
                             />
                             <CardContent>

@@ -55,4 +55,4 @@ In the project directory, you can run:
     ```sh
     yarn start
     ```
-    Open http://localhost:3000 to view it in your browser.
+    Open http://localhost:3049 to view it in your browser.
