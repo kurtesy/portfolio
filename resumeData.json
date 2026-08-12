@@ -4,7 +4,7 @@
     "occupation": "Senior Full Stack Engineer | AI & Cloud Architecture",
     "description": "10+ years building high-scale distributed systems and applied-AI platforms across Fintech and Foodtech",
     "image": "profile_pic.jpg",
-    "bio": "10+ years building high-scale distributed systems and applied-AI platforms across Fintech and Foodtech. Led a Gemini 3 migration cutting AI inference costs 90% and latency 36% while holding accuracy at 95%+. Specializes in Golang, cloud-native architecture (AWS/GCP), and production RAG/LLM engineering.",
+    "bio": "10+ years building high-scale distributed systems and applied-AI platforms across Fintech and Foodtech. Led a Gemini 3 migration cutting AI inference costs 90% and latency 36% while holding accuracy at 95%+, and architected production OpenSearch and AWS infrastructure for global vendor data quality. Specializes in Golang, cloud-native architecture (AWS/GCP), and production RAG/LLM engineering.",
     "contactmessage": "If you wanna talk to me, feel free to drop me a email or reach out to me on linkedin",
     "email": "np210291@gmail.com",
     "phone": "+49 157 5355 4462",
@@ -50,7 +50,7 @@
         "company": "Delivery Hero | Berlin",
         "title": "Senior Software Developer",
         "years": "2025 - Present",
-        "description": "Led Gemini 3 migration across the VDDP pipeline, cutting inference costs 90% and latency 36% while holding accuracy at 95%+; architected an OpenSearch deduplication engine with custom IBAN/Tax ID normalization for global vendor data quality; owned \"OCR Studio\" backend end-to-end (API contracts, config management), accelerating OCR testing cycles for the wider team; led cross-functional delivery of Menu Enrichment (AI descriptions, translation, menu sync) across 5 teams."
+        "description": "Led Gemini 3 migration across the VDDP pipeline, cutting inference costs 90% and latency 36% for flash models while holding accuracy at 95%+; architected and provisioned end-to-end OpenSearch infrastructure for deduplication with custom IBAN/Tax ID normalization pipelines, establishing a scalable foundation for global vendor data quality; spearheaded Production AWS infrastructure for OpenSearch and DDP services with staging parity and full observability (logs, metrics, alerting); owned \"OCR Studio\" backend end-to-end (API contracts, backend logic, versioned config management), accelerating OCR configuration and testing cycles for the wider team; diagnosed and resolved a critical Fargate task accumulation bug preventing infrastructure resource leakage; led migration of BFF services to Cloudflare, resolving persistent CORS and connectivity issues; cleaned up extensive technical debt in IDDP and MDS Subscriber services; built comprehensive integration test suites for the deduplication engine ahead of production rollout."
       },
       {
         "company": "Delivery Hero | Berlin",
@@ -133,6 +133,46 @@
       {
         "name": "Hindi",
         "level": "Native"
+      }
+    ]
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "react-layout-print",
+        "category": "npm Package · React",
+        "image": "react-canvas-js.png",
+        "url": "https://github.com/kurtesy/react-layout-print"
+      },
+      {
+        "title": "HomeToSuperheros",
+        "category": "React Native App",
+        "image": "app_preview.png",
+        "url": "https://github.com/kurtesy/HomeToSuperheros"
+      },
+      {
+        "title": "react-native-touchablewithdebounce",
+        "category": "npm Package · React Native",
+        "image": "doubletap.jpg",
+        "url": "https://github.com/kurtesy/react-native-touchablewithdebounce"
+      },
+      {
+        "title": "TwoPisceans Wanderlust",
+        "category": "React · TypeScript · Travel Blog",
+        "image": "canadian-wanderlust.jpg",
+        "url": "https://github.com/kurtesy/twopisceans-wanderlust"
+      },
+      {
+        "title": "Config Portal",
+        "category": "Internal Tooling",
+        "image": "smirkspace.jpg",
+        "url": "https://github.com/kurtesy/config-portal"
+      },
+      {
+        "title": "Magellan Cassini Hackathon 2025",
+        "category": "Python · Geospatial Data",
+        "image": "fury-fighting-gear.jpg",
+        "url": "https://github.com/kurtesy/magellan-cassini-hackathon25"
       }
     ]
   }
